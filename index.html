@@ -5,69 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عرض المنظمات الدولية - أحمد باوزير</title>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; font-family: sans-serif; overflow: hidden; background-color: #f8f9fa; }
-        .slide { display: none; height: 100vh; width: 100vw; padding: 20px; box-sizing: border-box; text-align: center; justify-content: center; align-items: center; flex-direction: column; background: #ffffff; }
+        body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow: hidden; background-color: #f0f2f5; }
+        .slide { display: none; height: 100vh; width: 100vw; padding: 40px; box-sizing: border-box; text-align: center; justify-content: center; align-items: center; flex-direction: column; background: #ffffff; transition: opacity 0.5s ease; }
         .slide.active { display: flex; }
-        .content-card { width: 95%; max-width: 500px; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-top: 6px solid #2c3e50; }
-        h1 { color: #2c3e50; font-size: 1.5rem; margin-bottom: 15px; }
-        h2 { color: #e67e22; font-size: 1.3rem; margin-bottom: 10px; }
-        p, li { color: #2c3e50; font-size: 1rem; line-height: 1.5; text-align: right; }
-        .controls { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; }
-        button { padding: 8px 15px; font-size: 0.9rem; cursor: pointer; border-radius: 20px; border: 1px solid #2c3e50; background: white; }
+        .content-card { max-width: 1000px; width: 100%; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-top: 10px solid #1a5276; display: flex; flex-direction: column; align-items: center; }
+        .slide-layout { display: flex; align-items: center; gap: 30px; text-align: right; width: 100%; }
+        .text-side { flex: 1; }
+        .image-side img { width: 350px; height: 250px; border-radius: 12px; object-fit: cover; border: 3px solid #e5e8e8; }
+        h1 { color: #1a5276; font-size: 2.5rem; margin-bottom: 20px; }
+        h2 { color: #d35400; font-size: 2rem; margin-bottom: 15px; border-right: 5px solid #d35400; padding-right: 15px; }
+        p, li { color: #2c3e50; font-size: 1.3rem; line-height: 1.6; }
+        .controls { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 15px; z-index: 100; }
+        button { padding: 12px 25px; font-size: 1rem; cursor: pointer; border-radius: 50px; border: none; background: #1a5276; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s; }
+        button:hover { background: #2471a3; transform: translateY(-2px); }
+        .slide-num { position: fixed; top: 20px; right: 20px; font-weight: bold; color: #7f8c8d; }
     </style>
 </head>
 <body>
+
+    <!-- الشريحة 1: الغلاف -->
     <div class="slide active" id="s1">
         <div class="content-card">
             <h1>القضية الفلسطينية في المنظمات الدولية</h1>
-            <p style="text-align:center">عمل الطالب: <strong>أحمد أنور باوزير</strong></p>
-            <p style="text-align:center">الرقم الجامعي: 2443956</p>
-            <p style="text-align:center">المقرر: المنظمات الدولية</p>
-            <p style="text-align:center">إشراف الدكتور: <strong>حمزه الجهني</strong></p>
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=400" alt="قانون" style="width:150px; margin-bottom:20px; border-radius: 50%;">
+            <p>إعداد الطالب: <strong>أحمد أنور باوزير</strong></p>
+            <p>الرقم الجامعي: <strong>2443956</strong></p>
+            <p>المقرر: المنظمات الدولية</p>
+            <p>إشراف الدكتور: <strong>حمزه الجهني</strong></p>
         </div>
     </div>
+
+    <!-- الشريحة 2: المقدمة -->
     <div class="slide" id="s2">
         <div class="content-card">
-            <h2>مدخل عام</h2>
-            <p>تستمد المنظمات الدولية شرعيتها من حماية الحقوق. تظل قضية فلسطين الاختبار الأكبر لمنظومة العمل الدولي المشترك عبر التاريخ الحديث.</p>
+            <div class="slide-layout">
+                <div class="text-side">
+                    <h2>مقدمة العرض</h2>
+                    <p>تمثل المنظمات الدولية الأداة القانونية والدبلوماسية الأبرز لنصرة القضايا العادلة. وفي مقدمة هذه القضايا تأتي القضية الفلسطينية كاختبار لسيادة القانون الدولي وقدرة المنظومة الدولية على تحقيق العدالة.</p>
+                </div>
+                <div class="image-side">
+                    <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&q=80&w=500" alt="العدالة">
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- الشريحة 3: هيئة الأمم المتحدة 1 -->
     <div class="slide" id="s3">
         <div class="content-card">
-            <h2>هيئة الأمم المتحدة (1)</h2>
-            <p>تعتبر الأمم المتحدة المنصة العالمية الأولى لمناقشة القضية، ومن أبرز أدوارها اعتبار القضية الفلسطينية قضية حقوق شعب غير قابلة للتصرف.</p>
+            <div class="slide-layout">
+                <div class="text-side">
+                    <h2>الأمم المتحدة (1)</h2>
+                    <ul>
+                        <li>تثبيت الحقوق المشروعة عبر قرارات الجمعية العامة.</li>
+                        <li>قرار 67/19 الذي منح فلسطين صفة "دولة مراقب غير عضو".</li>
+                        <li>توفير الحماية القانونية للقدس واللاجئين.</li>
+                    </ul>
+                </div>
+                <div class="image-side">
+                    <img src="https://images.unsplash.com/photo-1560523160-754a9e25c68f?auto=format&fit=crop&q=80&w=500" alt="الأمم المتحدة">
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- الشريحة 4: الأمم المتحدة 2 -->
     <div class="slide" id="s4">
         <div class="content-card">
-            <h2>هيئة الأمم المتحدة (2)</h2>
-            <p>ركزت المنظمة مؤخراً على إدانة الاستيطان (قرار 2334)، ودعم المساعي الفلسطينية للانضمام للمنظمات الدولية كاليونسكو.</p>
+            <div class="slide-layout">
+                <div class="text-side">
+                    <h2>الأمم المتحدة (2)</h2>
+                    <p>ركزت المنظمة على مواجهة السياسات غير القانونية عبر:</p>
+                    <ul>
+                        <li>إصدار قرار مجلس الأمن 2334 ضد الاستيطان.</li>
+                        <li>الدور الإنساني الحيوي لوكالة (الأونروا).</li>
+                    </ul>
+                </div>
+                <div class="image-side">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=500" alt="قانون دولي">
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- الشريحة 5: مجلس التعاون الخليجي -->
     <div class="slide" id="s5">
         <div class="content-card">
-            <h2>مجلس التعاون الخليجي</h2>
-            <p>يتميز الموقف الخليجي بالثبات، حيث يتم التأكيد دائماً على المبادرة العربية كسبيل وحيد للحل وتحقيق الاستقلال.</p>
+            <div class="slide-layout">
+                <div class="text-side">
+                    <h2>مجلس التعاون الخليجي</h2>
+                    <ul>
+                        <li>الموقف الخليجي ثابت: لا سلام إلا بحل الدولتين.</li>
+                        <li>دعم المبادرة العربية للسلام في كافة المحافل الدولية.</li>
+                        <li>الدعم التنموي والإنساني المستمر لمؤسسات الدولة.</li>
+                    </ul>
+                </div>
+                <div class="image-side">
+                    <img src="https://images.unsplash.com/photo-1571587157547-443993045659?auto=format&fit=crop&q=80&w=500" alt="التعاون">
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- الشريحة 6: الخلاصة -->
     <div class="slide" id="s6">
         <div class="content-card">
-            <h2>الخلاصة</h2>
-            <p>العمل عبر المنظمات الدولية يمنح القضية صبغة قانونية عالمية، وهو مكمل أساسي للجهود الدبلوماسية لتحقيق العدالة.</p>
+            <h2>الخلاصة والتوصيات</h2>
+            <p>يظل العمل القانوني والدبلوماسي عبر المنظمات الدولية هو السبيل الوحيد لانتزاع الاعتراف الدولي الكامل بالدولة الفلسطينية، مما يتطلب استمرار الضغط السياسي لتنفيذ القرارات الأممية المتعطلة.</p>
         </div>
     </div>
+
+    <!-- الشريحة 7: المصادر -->
+    <div class="slide" id="s7">
+        <div class="content-card">
+            <h2>المصادر والمراجع</h2>
+            <ul style="text-align:right">
+                <li>ميثاق الأمم المتحدة والقرارات الصادرة عن الجمعية العامة.</li>
+                <li>موقع وكالة الأمم المتحدة لإغاثة وتشغيل اللاجئين (UNRWA).</li>
+                <li>البيانات الختامية للقمم الدورية لمجلس التعاون الخليجي.</li>
+                <li>الكتب المقررة في مادة المنظمات الدولية.</li>
+            </ul>
+        </div>
+    </div>
+
     <div class="controls">
         <button onclick="change(1)">التالي</button>
         <button onclick="change(-1)">السابق</button>
     </div>
+    <div class="slide-num" id="info">شريحة 1 من 7</div>
+
     <script>
         let curr = 1;
         function change(dir) {
             let next = curr + dir;
-            if(next > 0 && next <= 6) {
+            if(next > 0 && next <= 7) {
                 document.getElementById('s'+curr).classList.remove('active');
                 curr = next;
                 document.getElementById('s'+curr).classList.add('active');
+                document.getElementById('info').innerText = `شريحة ${curr} من 7`;
             }
         }
     </script>
